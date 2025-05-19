@@ -1,0 +1,196 @@
+/* Global Resets & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* For smooth scrolling when clicking nav links */
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* Basic sans-serif font, we can change this later */
+    background-color: #0D1B2A; /* Oxford Blue - Main Background */
+    color: #E0E1DD; /* Platinum - Main Text Color */
+    line-height: 1.6;
+}
+
+.container {
+    width: 85%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Header & Navigation */
+header {
+    background-color: #1B263B; /* Space Cadet - Slightly lighter for header */
+    padding: 15px 0;
+    position: sticky; /* Makes the header stick to the top on scroll */
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+nav {
+    width: 85%;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #E0E1DD;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #E0E1DD;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #778DA9; /* Light Slate Gray for hover */
+}
+
+/* Hero Section (#home) */
+.hero {
+    min-height: 80vh; /* Make hero section take up most of the viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #0D1B2A; /* Oxford Blue */
+    padding: 60px 20px;
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    margin-bottom: 15px;
+    color: #E0E1DD;
+}
+
+.hero-content p {
+    font-size: 1.3em;
+    margin-bottom: 30px;
+    color: #E0E1DD; /* Platinum for hero text */
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #415A77; /* Shadow Blue */
+    color: #E0E1DD;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #778DA9; /* Light Slate Gray */
+}
+
+/* General Section Styling */
+section {
+    padding: 60px 0;
+}
+
+section:nth-child(odd):not(.hero) { /* Style for alternating sections, excluding hero */
+    background-color: #1B263B; /* Space Cadet for slightly different background */
+}
+
+
+section h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #E0E1DD; /* Platinum for headings */
+    position: relative;
+    padding-bottom: 10px;
+}
+
+section h2::after { /* Underline effect for headings */
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #415A77; /* Shadow Blue */
+}
+
+/* Project Section */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 25px;
+}
+
+.project-card {
+    background-color: #0D1B2A; /* Oxford Blue for cards, or #1B263B if section is #0D1B2A */
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    border: 1px solid #415A77; /* Shadow Blue border */
+}
+
+.project-card h3 {
+    color: #E0E1DD;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    font-size: 0.95em;
+    margin-bottom: 15px;
+    color: #E0E1DD; /* Platinum for card text */
+}
+
+.project-link {
+    color: #778DA9; /* Light Slate Gray */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project-link:hover {
+    text-decoration: underline;
+}
+
+/* Contact Section */
+#contact {
+    text-align: center;
+}
+
+#contact a {
+    color: #778DA9; /* Light Slate Gray */
+    text-decoration: none;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1B263B; /* Space Cadet */
+    color: #778DA9; /* Light Slate Gray for footer text */
+    font-size: 0.9em;
+}
